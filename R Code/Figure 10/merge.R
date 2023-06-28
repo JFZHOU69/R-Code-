@@ -1,0 +1,5 @@
+setwd("")
+data1=read.table("Venn.txt",header = T,sep = "\t")
+data2=read.table("1.txt",header = T,sep = "\t")
+data3=merge(data1,data2,by="miRNA")
+write.table(data3,"miRNA_mRNA.txt",quote = F,sep = "\t",row.names = F)
